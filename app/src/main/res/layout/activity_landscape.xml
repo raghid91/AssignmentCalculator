@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.acer.assignmentcalculator.LandscapeActivity"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background"
+
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    android:stretchColumns="0, 1, 2, 3, 4, 5" >
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp" >
+
+        <Button
+            android:id="@+id/buttonHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softgrey"
+            android:minHeight="50sp"
+
+            android:contentDescription="@string/help"
+            android:onClick="goHelp"
+            android:text="@string/help"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            tools:ignore="ButtonStyle" />
+
+
+        <Button
+            android:id="@+id/buttonMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softgrey"
+            android:minHeight="50sp"
+
+            android:contentDescription="@string/mode"
+            android:text="@string/mode"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+
+            android:onClick="goToStandard"
+            tools:ignore="ButtonStyle" />
+
+        <TextView
+            android:id="@+id/outputView"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:background="@color/softblue"
+
+            android:gravity="right"
+            android:text="@string/zero"
+            android:textSize="40sp"/>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonMS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softgreen"
+
+            android:contentDescription="@string/MS"
+            android:text="@string/MS"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goMS"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonMC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softgreen"
+
+            android:contentDescription="@string/MC"
+            android:text="@string/MC"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goMC"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonCE"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/CE"
+            android:text="@string/CE"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goCE"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/C"
+            android:text="@string/C"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goC"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonSqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/sqrt"
+            android:text="@string/sqrt"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goSqrt"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/divide"
+            android:text="@string/divide"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonMP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softgreen"
+
+            android:contentDescription="@string/MP"
+            android:text="@string/MP"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goMP"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonPi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softyellow"
+
+            android:contentDescription="@string/Pi"
+            android:text="@string/Pi"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goPi"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/seven"
+            android:text="@string/seven"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/eight"
+            android:text="@string/eight"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/nine"
+            android:text="@string/nine"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/multiply"
+            android:text="@string/multiply"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonX2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/x2"
+            android:text="@string/x2"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goX2"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button10x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/x10"
+            android:text="@string/x10"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="go10X"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/four"
+            android:text="@string/four"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/five"
+            android:text="@string/five"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/six"
+            android:text="@string/six"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/subtract"
+            android:text="@string/subtract"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonMod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/mod"
+            android:text="@string/mod"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonXy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/xy"
+            android:text="@string/xy"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/one"
+            android:text="@string/one"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/two"
+            android:text="@string/two"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/three"
+            android:text="@string/three"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/add"
+            android:text="@string/add"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperator"
+            tools:ignore="ButtonStyle" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/buttonLeftBracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/leftBracket"
+            android:onClick="goLeftBracket"
+            android:text="@string/leftBracket"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonRightBracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/softred"
+
+            android:contentDescription="@string/rightBracket"
+            android:text="@string/rightBracket"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goRightBracket"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/button0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+
+            android:background="@color/softyellow"
+            android:contentDescription="@string/zero"
+            android:text="@string/zero"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goOperand"
+            tools:ignore="ButtonStyle" />
+
+        <Button
+            android:id="@+id/buttonCompute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+
+            android:background="@color/softred"
+            android:contentDescription="@string/equal"
+            android:text="@string/equal"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:onClick="goCompute"
+            tools:ignore="ButtonStyle" />
+
+
+    </TableRow>
+
+
+</TableLayout>
